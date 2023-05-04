@@ -9,8 +9,6 @@ import {
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
 
-const API_KEY = "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";
-
 function App() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
@@ -45,7 +43,7 @@ function App() {
 
     const systemMessage = {
       role: "system",
-      content: "Explain all concepts like I am a full sctak developer"
+      content: "Explain things like you're talking to a software professional with 2 years of experience."
     }
 
     const apiRequestBody = {
@@ -59,7 +57,7 @@ function App() {
     {
       method: "POST",
       headers: {
-        "Authorization": "Bearer " + API_KEY,
+        "Authorization": "Bearer " + process.env.REAC_APP_OPEN_AI,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiRequestBody)
