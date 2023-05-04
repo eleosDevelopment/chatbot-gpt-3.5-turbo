@@ -57,7 +57,7 @@ function App() {
     {
       method: "POST",
       headers: {
-        "Authorization": "Bearer " + process.env.REAC_APP_OPEN_AI,
+        "Authorization": "Bearer " + process.env.REACT_APP_OPEN_AI,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiRequestBody)
